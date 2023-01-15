@@ -1,5 +1,5 @@
 let playerText = document.getElementById('playerText')
-let restartBtn = document.getElementById('retartBtn')
+let restartBtn = document.getElementById('restartBtn')
 let boxes = Array.from (document.getElementsByClassName('box'))
 
 let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
@@ -49,8 +49,9 @@ function playerHasWon() {
         if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
             return [a,b,c]
         }
-        return false
+       
     }
+    return false 
 }
 
 restartBtn.addEventListener('click' , restart)
